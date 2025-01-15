@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Brocel " />
+    <meta name="keywords"content="Tripleten, Paisajes, Web, Red Social, Fotografía"/>
+    <meta name="description" content="Proyecto tripleten" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Around The U.S.</title>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/header-logo.svg"
+          alt="Logo Around the U.S."
+          class="header__logo"
+        />
+      </header>
+
+      <main class="content">
+        <section class="profile" id="profile">
+          <img
+            src="./images/image-profile.png"
+            alt="Imagen de perfil."
+            class="profile__avatar"
+          />
+          <div class="profile__info">
+            <h2 class="profile__name" id="profile-name">Jacques Cousteau</h2>
+            <h3 class="profile__about" id="profile-job">Explorador</h3>
+            <button id="edit-button-open" class="profile__edit-button">
+              <img src="./images/edit-button.svg" alt=" Boton editar" />
+            </button>
+          </div>
+          <button class="profile__add-button" id="add-button-open">+</button>
+        </section>
+        <dialog id="modal-edit" class="dialog-general">
+          <button class="profile__close-button">
+            <img
+              src="./images/Close-Icon.svg"
+              alt="Cerrar"
+              id="edit-button-close"
+              class="profile__close-icon"
+            />
+          </button>
+          <form class="profile__edit-form" id="profile-form" novalidate>
+            <header class="profile__edit-form-header">Editar Perfil</header>
+            <input
+              type="text"
+              class="profile__edit-form-input profile__edit-form-input_name"
+              placeholder="Nombre"
+              id="name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="form__input-error" id="name-error"></span>
+            <input
+              type="text"
+              class="profile__edit-form-input profile__edit-form-input_job"
+              placeholder="Acerca de mí"
+              id="job"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span class="form__input-error" id="job-error"></span>
+            <button
+              id="save-button"
+              class="profile__edit-form-button profile__edit-form-button_save"
+            >
+              Guardar
+            </button>
+          </form>
+        </dialog>
+        <section class="elements">
+          <div class="element">
+            <img
+              src="./images/img1.png"
+              alt="Imagen 1"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p></p>
+              <button class="element__button">
+                <img
+                  src="./images/heart.svg"
+                  alt="Like button"
+                />
+                <img src="./images/heart.svg" alt="Like button" />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/img2.png"
+              alt="Descripción de la imagen 2"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Lago Louise</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart.svg"
+                  alt="Like button"
+                />
+              <p></p>
+              <button class="element__button" id="">
+                <img src="./images/heart.svg" alt="Like button" />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/img3.png"
+              alt="Descripción de la imagen 3"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Montañas Calvas</p>
+              <button class="element__button">
+                <img src="./images/heart.svg" alt="Like button" />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/img4.jpg"
+              alt="Descripción de la imagen 4"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Latemar</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart.svg"
+                  alt="Like button"
+                />
+                <img src="/images/heart.svg" alt="Like button" />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/img5.jpg"
+              alt="Descripción de la imagen 5"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Vanois National Park</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart.svg"
+                  alt="Like button"
+                />
+                <img src="./images/heart.svg" alt="Like button" />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/img6.jpg"
+              alt="Descripción de la imagen 6"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Lago di Braies</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart.svg"
+                  alt="Like button"
+                />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <dialog id="modal-add" class="dialog-general">
+          <button class="element__close-button">
+            <img
+              src="./images/Close-Icon.svg"
+              alt="Cerrar"
+              id="add-button-close"
+              class="profile__close-icon"
+            />
+          </button>
+          <form class="profile__edit-form" id="profile-form" novalidate>
+            <header class="profile__edit-form-header">Nuevo Lugar</header>
+            <input
+              type="text"
+              class="profile__edit-form-input profile__edit-form-input_name"
+              placeholder="Titulo"
+              id="title"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span class="form__input-error" id="title-error"></span>
+            <input
+              type="url"
+              class="profile__edit-form-input profile__edit-form-input_job"
+              placeholder="URL de la imagen"
+              id="imageURL"
+              required
+            />
+            <span class="form__input-error" id="imageURL-error"></span>
+            <button
+              id="save-button-add"
+              class="profile__edit-form-button profile__edit-form-button_save"
+            >
+              Crear
+            </button>
+          </form>
+        </dialog>
+        <dialog id="modal-image" class="element__modal">
+          <button class="element__close-button" id="dialog-close-button">
+            <img
+              src="./images/Close-Icon.svg"
+              alt="Cerrar"
+              class="profile__close-icon"
+            />
+          </button>
+          <img
+            id="dialog-image"
+            src=""
+            alt="Imagen bonita"
+            class="element__modal-image"
+          />
+          <p id="dialog-title" class="element__modal-title"></p>
+        </dialog>
+        <footer>
+          <p class="footer">© 2025 Around The U.S.</p>
+        </footer>
+      </main>
+    </div>
+    <script src="./js/validate.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+
+</html>
